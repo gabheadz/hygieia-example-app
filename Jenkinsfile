@@ -1,8 +1,9 @@
 pipeline {
     agent any
     environment {
-        GRADLE_USER_HOME = "$WORKSPACE/.gradle"
         HOME="/var/jenkins_home"
+        GRADLE_USER_HOME = "$WORKSPACE/.gradle"
+        SONAR_USER_HOME = "$WORKSPACE/.sonar"
     }
     stages {
         stage('Build') {
