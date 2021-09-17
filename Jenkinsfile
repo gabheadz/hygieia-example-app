@@ -1,5 +1,8 @@
 pipeline {
-    agent any 
+    agent any
+    environment {
+        GRADLE_USER_HOME = "$WORKSPACE/.gradle"
+    }
     stages {
         stage('Build') {
             steps {
